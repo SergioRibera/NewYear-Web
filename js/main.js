@@ -38,10 +38,16 @@ function draw() {
         else
             sparkles[i].draw();
     }
-    if (int(random(0, 12)) == 0) {
+    /*if (int(random(0, 12)) == 0) {
         var thisRocket = new rocket();
         rockets.push(thisRocket);
-    }
+    }*/
+}
+function mouseClicked(){
+    stroke(255);
+    ellipse(mouseX, mouseY, 15, 15);
+    var thisRocket = new rocket(createVector(((width/2)-mouseX) * -1, 0), undefined, undefined, undefined, undefined);
+    rockets.push(thisRocket);
 }
 function rocket(position, speed, type, sparkler, afterblow) {
     //  stroke(255);
@@ -251,19 +257,4 @@ function sparkle(position, speed, fade, hue, sat, type) {
         this.brt = this.brt - fade;
         this.burntime++;
     }
-}
-function touchStarted() {
-    if (moving) {
-        moving = false;
-        strokeWeight(1);
-        fill(255);
-        rect(width / 2 - 30, -height + 20, 10, 30);
-        rect(width / 2 - 50, -height + 20, 10, 30);
-        noLoop();
-    } else {
-        moving = true;
-        loop();
-    }
-    // prevent default
-    return false;
 }
