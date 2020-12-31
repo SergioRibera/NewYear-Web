@@ -1,0 +1,18 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.txt-ny-st {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    bottom: 10px;
+    color: black;
+    font-family: SANS-SERIF;
+    font-size: x-large;
+    text-align: center;
+    background: -webkit-linear-gradient(-86deg, #EEF85B 5%, #7AEC8D 53%, #09E5C3 91%);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px transparent;
+}
