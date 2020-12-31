@@ -3,10 +3,6 @@ var sparkles = [];
 var moving = true;
 var gravity = 0.4;
 
-let sets = {
-    txt: "Happy New Year",
-    year: 2021
-};
 window.addEventListener("load", (e) => {
     let a = document.getElementById("txt-ny-t");
     a.innerText = sets.txt;
@@ -38,10 +34,10 @@ function draw() {
         else
             sparkles[i].draw();
     }
-    /*if (int(random(0, 12)) == 0) {
+    if (int(random(0, 12)) == 0) {
         var thisRocket = new rocket();
         rockets.push(thisRocket);
-    }*/
+    }
 }
 function mouseClicked(){
     stroke(255);
